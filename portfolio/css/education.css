@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +6,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    /* Professional Background Gradient */
-background-color: #dcdedf;
-    color: var(--dark);
+    background-color: #dcdedf;
+    color:black;
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -43,7 +41,6 @@ header {
 
 .logo span {
     color: #0984e3;
-    /* Accent Color */
 }
 
 .nav-links {
@@ -68,11 +65,15 @@ header {
 
 /* Header Info */
 .section-intro {
-    padding: 4rem 0 3rem;
-    text-align: center;
+    border-radius: 10px;
     position: relative;
+    padding: 50px 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
     z-index: -1;
 }
+
 
 .section-intro h1 {
     font-size: 2.5rem;
@@ -81,7 +82,7 @@ header {
 }
 
 .section-intro p {
-    color: var(--text-muted);
+    color:black;
 }
 
 /* Education Cards */
@@ -96,7 +97,7 @@ header {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background: white;
+    background: rgb(211, 211, 211);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);

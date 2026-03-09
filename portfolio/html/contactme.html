@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="../css/contactme.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
+    <header>
         <div class="container navbar-container">
             <h1 class="logo">Torikul <span>Roman</span></h1>
             <nav>
@@ -24,80 +26,95 @@
         </div>
     </header>
 
-    <main class="container contact-page">
-        <section class="section-intro">
-            <h1>Get in Touch</h1>
-            <p>Have a project in mind or just want to say hi? Feel free to send a message.</p>
-        </section>
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Contact Me</h1>
 
-        <div class="contact-card">
-            <form class="styled-form">
+            </div>
+
+            <form action="#">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" placeholder="Torikul" required>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" required placeholder="Enter first name">
                     </div>
                     <div class="form-group">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" id="lastname" placeholder="Roman" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="example@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" placeholder="e.g. Google">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" required placeholder="Enter last name">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Reason for Contact</label>
-                    <div class="radio-grid">
-                        <label class="radio-item">
-                            <input type="radio" name="reason" value="project" required> <span>Project</span>
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="reason" value="thesis"> <span>Thesis</span>
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="reason" value="job"> <span>Job Inquiry</span>
-                        </label>
-                    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="example@email.com">
                 </div>
 
                 <div class="form-group">
-                    <label>Areas of Interest</label>
-                    <div class="checkbox-grid">
-                        <label class="check-item">
-                            <input type="checkbox" value="web"> <span>Web Dev</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" value="mobile"> <span>Mobile Dev</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" value="ai"> <span>AI/ML</span>
-                        </label>
-                    </div>
+                    <label for="company">Company</label>
+                    <input type="text" id="company" placeholder="Organization name">
                 </div>
+
+                <fieldset class="radio-group">
+                    <legend>Gender:</legend>
+                    <label class="option-item">
+                        <input type="radio" name="gender" value="male" required>
+                        <span>Male</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="gender" value="female">
+                        <span>Female</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="radio-group">
+                       <label for="reason">Reason of Contact:</label>
+                    
+                    <label class="option-item">
+                        <input type="radio" name="reason" value="projects" required>
+                        <span>Projects</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="reason" value="thesis">
+                        <span>Thesis</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="reason" value="job">
+                        <span>Job</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="checkbox-group">
+                  <label for="topic">Topics:</label>
+                   
+                    <label class="option-item">
+                        <input type="checkbox" name="topic" value="web" required checked>
+                        <span>Web Development</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="topic" value="mobile">
+                        <span>Mobile Development</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="topic" value="ai">
+                        <span>AI/ML Development</span>
+                    </label>
+                </fieldset>
 
                 <div class="form-group">
-                    <label for="consultationdate">Preferred Consultation Date</label>
-                    <input type="date" id="consultationdate" required>
+                    <label for="date">Consultation Date: </label>
+                    <input type="date" id="date" required>
                 </div>
 
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Send Message</button>
-                    <button type="reset" class="btn-reset">Clear Form</button>
+                <div class="button-row">
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button type="reset" class="btn btn-reset">Reset</button>
                 </div>
             </form>
         </div>
     </main>
 
-     <footer>
+    <footer>
         <div class="container footer-content">
             <p class="footertitle">Connect on Social Networks</p>
             <ul class="footer-icons">
@@ -112,4 +129,5 @@
     </footer>
 
 </body>
+
 </html>
