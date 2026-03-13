@@ -77,13 +77,14 @@ header {
 }
 
 .section-intro h1 {
+    color: #9CD5FF;
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
 }
 
 .section-intro p {
-    color:black;
+    color:#9CD5FF;
     font-size: 1.2rem;
 }
 
