@@ -165,6 +165,135 @@ header {
     font-size: 0.9rem;
 }
 
+
+/* --- Extracurricular Cards --- */
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding-bottom: 100px;
+}
+.extra-card {
+    background: var(--bg-card);
+    padding: 50px 40px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.extra-img-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--bg-dark);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+.zoom-box {
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-placeholder { font-size: 2.5rem; }
+
+
+.extra-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px var(--primary-glow);
+}
+.extra-card:hover .zoom-box {
+    transform: scale(1.5) rotate(5deg); 
+}
+.extra-card h3 { 
+    margin-bottom: 15px; 
+    font-size: 1.4rem; 
+    font-weight: 700;
+}
+.extra-card p { 
+    color: var(--text-dim); 
+    font-size: 0.95rem; 
+    line-height: 1.7;
+}
+
+
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+.extra-card {
+    background: var(--bg-card);
+    padding: 50px 35px;
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    cursor: default;
+}
+
+/* --- THE ZOOM ENGINE --- */
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    background: var(--bg-dark);
+    border-radius: 22px; /* Soft square look */
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+/* Card Hover Effects */
+.extra-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px var(--primary-glow);
+}
+
+/* Icon Zoom-In Effect */
+.extra-card:hover .icon-circle {
+    transform: scale(1.4) rotate(8deg); /* Zooms and tilts slightly */
+    background: var(--primary);
+    border-color: transparent;
+    color: white;
+}
+
+/* Organizational Tag styling */
+.org-tag {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.extra-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.extra-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
 /* Footer */
 footer {
   background: #112c40;

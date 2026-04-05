@@ -152,6 +152,130 @@ header {
 }
 
 
+/* --- Upcoming Project Styling --- */
+.upcoming-card {
+    display: flex;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    gap: 40px;
+    transition: var(--transition);
+    margin-top: 30px;
+}
+
+.upcoming-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Image Zoom Logic */
+.upcoming-img-box {
+    flex: 1;
+    position: relative;
+    overflow: hidden; /* Important for zoom clipping */
+    min-height: 300px;
+}
+
+.upcoming-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.upcoming-card:hover .upcoming-img-box img {
+    transform: scale(1.15); /* Smooth Zoom */
+}
+
+/* Status Badge */
+.status-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: blue;
+    color: rgb(255, 255, 255);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Info Details */
+.upcoming-details {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upcoming-details .category {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.upcoming-details h3 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.upcoming-details h3 span {
+    color: var(--text-dim);
+    font-weight: 300;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.project-tags span {
+    background: var(--bg-dark);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+}
+
+/* Progress Bar */
+.progress-container p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--text-dim);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-dark);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 65%; /* Match your development status */
+    height: 100%;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
 .about-card {
     background-color: #264861;
     padding: 2.5rem;
@@ -330,5 +454,14 @@ footer {
 
     .nav-links li {
         margin: 0 10px;
+    }
+}
+@media (max-width: 850px) {
+    .upcoming-card {
+        flex-direction: column;
+        gap: 0;
+    }
+    .upcoming-img-box {
+        min-height: 250px;
     }
 }
