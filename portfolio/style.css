@@ -8,7 +8,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #9CD5FF;
-    background-color:#355872;
+    background-color: #355872;
 }
 
 .container {
@@ -108,6 +108,7 @@ header {
 .hero-text {
     flex: 1;
 }
+
 .hero-text h1 {
     font-size: 40px;
     margin-bottom: 10px;
@@ -155,17 +156,14 @@ header {
 /* --- Upcoming Project Styling --- */
 .upcoming-card {
     display: flex;
-    background: var(--bg-card);
     border-radius: 24px;
-    border: 1px solid var(--border);
     overflow: hidden;
     gap: 40px;
-    transition: var(--transition);
     margin-top: 30px;
 }
 
 .upcoming-card:hover {
-    border-color: var(--primary);
+    border-color: blue;
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
 }
 
@@ -173,7 +171,7 @@ header {
 .upcoming-img-box {
     flex: 1;
     position: relative;
-    overflow: hidden; /* Important for zoom clipping */
+    overflow: hidden;
     min-height: 300px;
 }
 
@@ -185,7 +183,7 @@ header {
 }
 
 .upcoming-card:hover .upcoming-img-box img {
-    transform: scale(1.15); /* Smooth Zoom */
+    transform: scale(1.15);
 }
 
 /* Status Badge */
@@ -200,7 +198,7 @@ header {
     font-size: 0.75rem;
     font-weight: 700;
     z-index: 2;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Info Details */
@@ -213,7 +211,7 @@ header {
 }
 
 .upcoming-details .category {
-    color: var(--primary);
+    color: #0984e3;
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -226,8 +224,8 @@ header {
 }
 
 .upcoming-details h3 span {
-    color: var(--text-dim);
-    font-weight: 300;
+    color: #0984e3;
+    font-weight: bold;
 }
 
 .project-tags {
@@ -238,43 +236,35 @@ header {
 }
 
 .project-tags span {
-    background: var(--bg-dark);
+    background: rgb(68, 68, 248);
     padding: 5px 12px;
     border-radius: 6px;
     font-size: 0.75rem;
     color: var(--text-dim);
-    border: 1px solid var(--border);
+    border: none;
 }
 
 /* Progress Bar */
 .progress-container p {
     font-size: 0.85rem;
     margin-bottom: 8px;
-    color: var(--text-dim);
+    color: white;
 }
 
 .progress-bar {
     width: 100%;
     height: 8px;
-    background: var(--bg-dark);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .progress-fill {
-    width: 65%; /* Match your development status */
+    width: 65%;
     height: 100%;
-    background: var(--primary);
-    box-shadow: 0 0 10px var(--primary);
+    background: green;
+    box-shadow: black;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
 
 .about-card {
     background-color: #264861;
@@ -456,12 +446,115 @@ footer {
         margin: 0 10px;
     }
 }
+
 @media (max-width: 850px) {
     .upcoming-card {
         flex-direction: column;
         gap: 0;
     }
+
     .upcoming-img-box {
         min-height: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Hero Section Adjustments */
+    .hero {
+        padding: 60px 15px;
+        gap: 30px;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 350px;
+        box-shadow: 12px 12px 0px #0984e3;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .hero-text-buttons a {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* About Card Adjustments */
+    .about-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .bio-data {
+        padding: 15px;
+    }
+
+    .bio-data h3 {
+        font-size: 1rem;
+    }
+
+    .bio-data li {
+        font-size: 0.9rem;
+    }
+
+    /* Upcoming Project Adjustments */
+    .upcoming-details {
+        padding: 25px 20px;
+    }
+
+    .upcoming-details h3 {
+        font-size: 1.6rem;
+    }
+
+    .upcoming-img-box {
+        min-height: 200px;
+    }
+
+    .project-tags span {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    /* Navbar link spacing */
+    .nav-links li {
+        margin: 0 5px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .navbar-container {
+        padding: 0 10px;
+    }
+
+    .nav-links li {
+        margin-left: 12px;
+    }
+
+
+    .nav-links a {
+        font-size: 0.75rem;
+        white-space: nowrap;
+
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 }
