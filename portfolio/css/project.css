@@ -146,6 +146,11 @@ header {
     gap: 1rem;
 }
 
+.project-links a:hover {
+  background-color: #0672c9;
+}
+
+
 .btn-primary {
     background: #0984e3;
     color: white;
